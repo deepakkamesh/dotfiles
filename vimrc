@@ -5,7 +5,7 @@ call plug#begin()
 Plug 'fatih/vim-go'
 Plug 'ctrlpvim/ctrlp.vim'
 Plug 'fatih/molokai'
-Plug 'Shougo/neocomplete.vim'
+Plug 'Valloric/YouCompleteMe'
 call plug#end()
 
 " Color Scheme
@@ -55,18 +55,6 @@ nmap <C-w> :w!<cr>
 imap <C-w> <esc>:w!<cr>
 
 " Autocomplete
-  let g:neocomplete#enable_at_startup = 1
-	  let g:neocomplete#enable_smart_case = 1
-		  let g:neocomplete#sources#syntax#min_keyword_length = 3
-
-			  if !exists('g:neocomplete#sources')
-								    let g:neocomplete#sources = {}
-										  endif
-											  let g:neocomplete#sources._ = ['buffer', 'member', 'tag', 'file', 'dictionary']
-												  let g:neocomplete#sources.go = ['omni']
-
-													  " disable sorting
-														   call neocomplete#custom#source('_', 'sorters', [])
 " Better split switching
 map <C-j> <C-W>j
 map <C-k> <C-W>k
